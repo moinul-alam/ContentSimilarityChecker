@@ -2,6 +2,15 @@ import streamlit as st
 from logic import count_words, preprocess_text, compute_tf, compute_idf, compute_tfidf, cosine_similarity, find_common_words, word_frequencies
 from bs4 import BeautifulSoup
 import requests
+import nltk
+
+# Download NLTK data at app startup
+# try:
+#     nltk.download('punkt')
+#     nltk.download('punkt_tab')
+#     nltk.download('stopwords')
+# except Exception as e:
+#     st.error(f"Error downloading NLTK data: {e}")
 
 def main():
     st.set_page_config(page_title="Document Similarity Checker", layout="wide")
